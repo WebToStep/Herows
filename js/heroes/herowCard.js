@@ -47,7 +47,7 @@ export const herowCard = data => {
                                  ${deathDayCheck()}
                               </small>               
                            </div>
-                           <img src="${'../../dbHeroes-master/' + data.photo}" class="card-img-top" alt="${data.name}">
+                           <img src="${'./dbHeroes-master/' + data.photo}" class="card-img-top" alt="${data.name}">
                         </div>
                         <div class="card-body p-3">
                            <h5 class="card-title text-gray-900 mb-1">${data.name}</h5>

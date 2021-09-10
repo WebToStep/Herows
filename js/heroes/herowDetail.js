@@ -32,7 +32,7 @@ export const renderHerowDetail = hash => {
                          <div class="bg-white p-3 widget shadow rounded mb-4">
             <!-- photo -->
                             ${i.photo ?
-                        `<img src="${'../../dbHeroes-master/' +
+                        `<img src="${'./dbHeroes-master/' +
                         i.photo}" class="img-fluid rounded" alt="${i.name}">` :
                         ''} 
                             <h1 class="h6 mb-3 mt-3 font-weight-bold text-gray-900">Herow Info</h1>
