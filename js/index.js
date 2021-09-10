@@ -1,7 +1,8 @@
-import { filteredCards } from './heroes/filteredCards.js';
-import { herowCard } from './heroes/herowCard.js';
-import { resetFilters } from './heroes/resetFilters.js';
-import { renderHerowDetail } from './heroes/herowDetail.js';
+import { filteredCards } from '../js/heroes/filteredCards.js';
+import { herowCard } from '../js/heroes/herowCard.js';
+import { resetFilters } from '../js/heroes/resetFilters.js';
+import { renderHerowDetail } from '../js/heroes/herowDetail.js';
+import { filteredLenght } from '../js/counters/filteredLenght.js';
 
 const heroes = document.querySelector('.heroes'),
     spiner = document.querySelector('.spinner'),
@@ -38,10 +39,10 @@ if (reset) {
     reset.addEventListener('click', () => {
         resetFilters();
     });
-}
 
-// window.addEventListener('hashchange', () => alert('ku'));
-// console.log('window.location: ', window.location);
+    // Количество элементов записываем в спан
+    filteredLenght();
+}
 
 if (window.location.hash) {
     renderHerowDetail(window.location.hash.slice(1));

@@ -22,12 +22,6 @@ export const herowCard = data => {
             }
         } else return '';
     };
-    const moviesCheck = () => {
-        if (data.movies) {
-            return `List of films: <br>
-        <small class="text-secondary"> - ${data.movies.join('<br> - ')}</small>`;
-        } else return '';
-    };
     const statusCheck = () => {
         if (data.status === 'alive') {
             return `<i class="fas fa-heart text-danger"></i> <small class="text-secondary"> ${data.status}</small>`;
@@ -60,9 +54,7 @@ export const herowCard = data => {
                            <p class="card-text">
                               <small class="text-muted">${data.species}</small>
                            </p>
-                           <p class="card-text">
-                              ${moviesCheck()}
-                           </p>
+                          
                         </div>
                      </a>
                    </div>
