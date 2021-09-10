@@ -36,7 +36,7 @@ export const herowCard = data => {
     card.classList.add('col-xl-4', 'col-md-6', 'mb-4');
     card.innerHTML = `
                   <div class="herow-card card m-card shadow border-0">
-                     <a href="herow-detail.html#${data.name.replace(/ /, '')}">
+                     <a href="herow-detail.html#${data.name.replace(/ +/g, '')}">
                         <div class="m-card-cover">
                            <div class="position-absolute bg-white shadow-sm rounded p-2 m-2 love-box">
                               <h6 class="text-gray-900 mb-0 font-weight-bold">
