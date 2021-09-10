@@ -17,7 +17,7 @@ export const renderHerowDetail = hash => {
                             <div class="position-absolute bg-white shadow-sm rounded text-center p-2 m-2 love-box">
                                 <h6 class="text-gray-900 mb-0 font-weight-bold"><i class="fas fa-heart text-danger"></i> ${Math.floor(Math.random() * (100 - 30) + 30)}</h6>
                             </div>
-                            <img src="img/cinema/Ресурс${Math.floor(Math.random() * 3)}.png" class="card-img-top" alt="...">
+                            <img src="../../img/cinema/Ресурс${Math.floor(Math.random() * 3)}.png" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body p-3">
                             <h5 class="card-title text-gray-900 mb-1">${film}</h5>
