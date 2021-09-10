@@ -1,4 +1,11 @@
 import { getData } from '../scrypts/data.js';
+import { Modal } from '../modal/modal.js';
+import { resetFilters } from './resetFilters.js';
+
+const modal = new Modal();
+const modalTitle = 'Hero not found!';
+const modalBody = `<p>Unfortunately, the hero with the given parameters does not exist! 
+Please change your search parameters ...</p>`;
 
 
 // фильтр получает функцию формирующую карту героя и массив с ключами в db(ключи берем из id input)
@@ -38,7 +45,10 @@ export const filteredCards = (callback, values) => {
                     });
                     // рендерим результат на страницу
                     newArr.forEach(newArr => callback(newArr));
-                    if (!newArr.length) { console.log('modal'); }
+                    if (!newArr.length) { 
+                        modal.init(modalTitle, modalBody);
+                        resetFilters();
+                    }
                     //   если в массиве только species или только gender
                 } else if (findKeys.indexOf("species") > -1 || findKeys.indexOf("gender") > -1) {
                     values.forEach(item => {
@@ -47,7 +57,10 @@ export const filteredCards = (callback, values) => {
                         newArr = filtered(data, item);
                         // рендерим на страницу
                         newArr.forEach(newArr => callback(newArr));
-                        if (!newArr.length) { console.log('modal'); }
+                        if (!newArr.length) {
+                            modal.init(modalTitle, modalBody);
+                            resetFilters();
+                        }
                     });
                 }
             // если values не передавались то выводим всех героев из бд

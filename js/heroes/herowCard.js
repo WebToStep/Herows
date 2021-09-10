@@ -42,7 +42,7 @@ export const herowCard = data => {
     card.classList.add('col-xl-4', 'col-md-6', 'mb-4');
     card.innerHTML = `
                   <div class="herow-card card m-card shadow border-0">
-                     <a href="herow-detail.html">
+                     <a href="herow-detail.html#${data.name.replace(/ /, '')}">
                         <div class="m-card-cover">
                            <div class="position-absolute bg-white shadow-sm rounded p-2 m-2 love-box">
                               <h6 class="text-gray-900 mb-0 font-weight-bold">
@@ -53,7 +53,7 @@ export const herowCard = data => {
                                  ${deathDayCheck()}
                               </small>               
                            </div>
-                           <img src="${'./dbHeroes-master/' + data.photo}" class="card-img-top" alt="...">
+                           <img src="${'../dbHeroes-master/' + data.photo}" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body p-3">
                            <h5 class="card-title text-gray-900 mb-1">${data.name}</h5>

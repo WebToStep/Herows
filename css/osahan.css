@@ -4501,6 +4501,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
+  cursor: pointer;
 }
 
 .card > hr {
@@ -5636,6 +5637,7 @@ a.close.disabled {
 }
 
 .modal {
+  background: #171a2aab;
   position: fixed;
   top: 0;
   left: 0;
