@@ -10,20 +10,20 @@ export const renderHerowDetail = hash => {
                 i.name.replace(/ /, '') === hash
             );
             filtered.forEach(i => {
-                const filmList = i.movies.map(film => [` <div class="col-xl-3 col-md-6">
-                    <div class="card m-card shadow border-0">
+                const filmList = i.movies.map(film => `
+                <div class="col-xl-3 col-md-6">
+                    <div class="card m-card film shadow border-0">
                         <div class="m-card-cover">
                             <div class="position-absolute bg-white shadow-sm rounded text-center p-2 m-2 love-box">
-                                <h6 class="text-gray-900 mb-0 font-weight-bold"><i class="fas fa-heart text-danger"></i> 74%</h6>
-                                <small class="text-muted">88,865</small>
+                                <h6 class="text-gray-900 mb-0 font-weight-bold"><i class="fas fa-heart text-danger"></i> 74</h6>
                             </div>
-                            <img src="img/cinema/Ресурс${Math.floor(Math.random() * 2)}.png" class="card-img-top" alt="...">
+                            <img src="img/cinema/Ресурс${Math.floor(Math.random() * 3)}.png" class="card-img-top" alt="...">
                         </div>
-                            <div class="card-body p-3">
-                                <h5 class="card-title text-gray-900 mb-1">${film}</h5>
-                            </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title text-gray-900 mb-1">${film}</h5>
                         </div>
-                    </div>`]);
+                    </div>
+                </div>`);
                 // // шаблон html карточки героя
                 const herow = document.createElement('div');
                 herow.className = 'row';
@@ -64,7 +64,7 @@ export const renderHerowDetail = hash => {
             <!-- citizenship --> 
                              ${i.citizenship ?
                         `<p class="mb-2"><i class="fas fa-map-marker-alt fa-fw"></i>
-                                Date of death - ${i.citizenship}</p>` : ''} 
+                                Location - ${i.citizenship}</p>` : ''} 
                          </div>
                       </div>
                       <div class="col-xl-9 col-lg-9">
@@ -131,7 +131,6 @@ export const renderHerowDetail = hash => {
                                                     '</small>' +
                                                     '</p>' : ''
                     }
-                                  
                                </div>
                             </div>
                          </div>
@@ -139,10 +138,7 @@ export const renderHerowDetail = hash => {
                          <h3>Actor - ${i.actors}</h3>
                             <h1 class="h6 mb-3 mt-0 font-weight-bold text-gray-900">list of films</h1>
                             <div class="row">
-                               
-                            ${filmList}
-                               
-
+                            ${filmList.join('')}
                             </div>
                          </div>
                       </div>`;

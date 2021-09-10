@@ -7,7 +7,7 @@ export const herowCard = data => {
     const birtDayCheck = () => {
         if (data.birthDay) {
             return `<small class="text-success">
-         <i class="fas fa-calendar-alt fa-sm text-gray-400"></i> Родился "${data.birthDay}"
+         <i class="fas fa-calendar-alt fa-sm text-gray-400"></i> Birthday "${data.birthDay}"
         </small>`;
         } else return '';
     };
@@ -15,16 +15,16 @@ export const herowCard = data => {
         if (data.deathDay) {
             if (data.birthDay) {
                 return `<br><small class="text-danger">
-            <i class="fas fa-calendar-alt fa-sm text-gray-400"></i> Умер "${data.deathDay}"</small>`;
+            <i class="fas fa-calendar-alt fa-sm text-gray-400"></i> Death date "${data.deathDay}"</small>`;
             } else {
                 return `<small class="text-danger">
-            <i class="fas fa-calendar-alt fa-sm text-gray-400"></i> Умер "${data.deathDay}"</small>`;
+            <i class="fas fa-calendar-alt fa-sm text-gray-400"></i> Death date "${data.deathDay}"</small>`;
             }
         } else return '';
     };
     const moviesCheck = () => {
         if (data.movies) {
-            return `Список фильмов: <br>
+            return `List of films: <br>
         <small class="text-secondary"> - ${data.movies.join('<br> - ')}</small>`;
         } else return '';
     };
